@@ -82,7 +82,7 @@
 /datum/gear/suit/poncho/New()
 	..()
 	var/poncho = list()
-	poncho["poncho, tan"] = /obj/item/clothing/suit/poncho
+	poncho["poncho, tan"] = /obj/item/clothing/suit/poncho/tan
 	poncho["poncho, blue"] = /obj/item/clothing/suit/poncho/blue
 	poncho["poncho, green"] = /obj/item/clothing/suit/poncho/green
 	poncho["poncho, purple"] = /obj/item/clothing/suit/poncho/purple

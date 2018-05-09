@@ -2040,3 +2040,28 @@ obj/item/clothing/suit/storage/hooded/fluff/make_poncho //Raincoat Poncho - M.A.
 	update_icon()
 	playsound(src, "spark", 50, 1, -1)
 	..()
+
+
+/obj/item/clothing/suit/morphicponcho  // Kaedwuff's Snowflake poncho
+	name = "Chromomorphic Poncho"
+	icon_state = "classicponcho"
+	item_state = "classicponcho"
+	desc = "A special poncho with morphic dye, allowing it to change its color and designs to several different settings."
+	var/global/list/clothing_choices
+
+/obj/item/clothing/suit/morphicponcho/Initialize()
+	. = ..()
+	if(!clothing_choices)
+		var/blocked = list(src.type, /obj/item/clothing/suit/poncho/fluff/flaming_poncho) // Wouldn't want to steal sleepywolf's snowflake poncho
+		clothing_choices = generate_chameleon_choices(/obj/item/clothing/suit/poncho, blocked)
+
+/obj/item/clothing/suit/morphicponcho/verb/change(picked in clothing_choices)
+	set name = "Change Poncho Color"
+	set category = "Chameleon Items"
+	set src in usr
+
+	if(!ispath(clothing_choices[picked]))
+		return
+
+	disguise(clothing_choices[picked])
+	update_clothing_icon()
