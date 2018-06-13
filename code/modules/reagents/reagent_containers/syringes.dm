@@ -351,3 +351,14 @@
 		reagents.add_reagent("chloralhydrate", 60)
 		mode = SYRINGE_INJECT
 		update_icon()
+
+
+// Traitor Syringes
+
+
+/obj/item/weapon/reagent_containers/syringe/traitor/plague
+	Initialize()
+		. = ..()
+		reagents.add_reagent("blood", 5)
+		mode = SYRINGE_INJECT
+		update_icon()
