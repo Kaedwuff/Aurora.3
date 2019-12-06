@@ -71,6 +71,7 @@
 	var/datum/money_account/initial_account
 
 	var/ambitions
+	var/religion
 
 /datum/mind/New(var/key)
 	src.key = key

@@ -43,3 +43,5 @@
 #define RELIGION_HIVEPANTHEON "Hive Pantheon"
 #define RELIGION_PREIMMINENNCE "Preimminennce"
 #define RELIGION_PILOTDREAM "Pilot Dream"
+
+#define RELIGION_NARSIE "Cult"
